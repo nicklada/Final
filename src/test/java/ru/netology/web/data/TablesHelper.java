@@ -16,7 +16,7 @@ public class TablesHelper {
 
         try (
                 val conn = DriverManager.getConnection(
-                        "jdbc:mysql://localhost:3306/app", "app", "pass"
+                        "jdbc:postgresql://localhost:5432/app", "app", "pass"
                 )
         ) {
             runner.update(conn, creditRequest);
@@ -30,7 +30,7 @@ public class TablesHelper {
 
         try (
                 val conn = DriverManager.getConnection(
-                        "jdbc:mysql://localhost:3306/app", "app", "pass"
+                        "jdbc:postgresql://localhost:5432/app", "app", "pass"
                 );
                 val countStmt = conn.createStatement();
         ) {
@@ -51,7 +51,7 @@ public class TablesHelper {
 
         try (
                 val conn = DriverManager.getConnection(
-                        "jdbc:mysql://localhost:3306/app", "app", "pass"
+                        "jdbc:postgresql://localhost:5432/app", "app", "pass"
                 );
                 val countStmt = conn.createStatement();
         ) {
